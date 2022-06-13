@@ -2,10 +2,22 @@ package com.example.locktank.model;
 
 import android.graphics.drawable.Drawable;
 
-public class InstalledApps {
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
+
+@Entity(tableName = "apps")
+public class InstalledApps implements Serializable {
+    @PrimaryKey(autoGenerate = true)
+    int id ;
+    @ColumnInfo(name = "title")
     String title = "";
+    @ColumnInfo(name = "packageName")
     String packageName = "";
-    Drawable icon;
+    @ColumnInfo(name = "icon")
+    byte[] icon;
     boolean isLocked = false;
 
     public boolean isLocked() {
@@ -16,11 +28,19 @@ public class InstalledApps {
         isLocked = locked;
     }
 
-    public Drawable getIcon() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public byte[] getIcon() {
         return icon;
     }
 
-    public void setIcon(Drawable icon) {
+    public void setIcon(byte[] icon) {
         this.icon = icon;
     }
 
@@ -36,13 +56,7 @@ public class InstalledApps {
         return packageName;
     }
 
-    public InstalledApps(String title, String packageName, Drawable icon) {
-        this.title = title;
-        this.packageName = packageName;
-        this.icon = icon;
-    }
-
-    public InstalledApps(String title, String packageName, Drawable icon, boolean isLocked) {
+    public InstalledApps(String title, String packageName, byte[] icon, boolean isLocked) {
         this.title = title;
         this.packageName = packageName;
         this.icon = icon;
@@ -50,11 +64,6 @@ public class InstalledApps {
     }
 
     public void setPackageName(String packageName) {
-        this.packageName = packageName;
-    }
-
-    public InstalledApps(String title, String packageName) {
-        this.title = title;
         this.packageName = packageName;
     }
 }

@@ -72,30 +72,4 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(viewPagerAdapter);
     }
-
-    private List<InstalledApps> getInstalledApps(boolean getSysPackages) {
-        List<InstalledApps> res = new ArrayList<InstalledApps>();
-        List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
-        for(int i=0;i<packs.size();i++) {
-            PackageInfo p = packs.get(i);
-            res.add(new InstalledApps(p.applicationInfo.loadLabel(getPackageManager()).toString(),
-                    p.packageName,
-                    p.applicationInfo.loadIcon(getPackageManager())));
-
-//            if ((p.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0){
-//                res.add(new InstalledApps(p.applicationInfo.loadLabel(getPackageManager()).toString(),
-//                        p.packageName,
-//                        p.applicationInfo.loadIcon(getPackageManager())));
-//            }
-
-            /*if ((getSysPackages) && (p.versionName == null)) {
-                continue;
-            }
-            res.add(new InstalledApps(p.applicationInfo.loadLabel(getPackageManager()).toString(),
-                    p.packageName,
-                    p.applicationInfo.loadIcon(getPackageManager())));*/
-
-        }
-        return res;
-    }
 }

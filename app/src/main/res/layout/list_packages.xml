@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/grey"
+    app:cardBackgroundColor="@color/black"
     app:cardElevation="8dp"
     android:layout_margin="8dp">
     <LinearLayout
@@ -15,6 +15,7 @@
             android:id="@+id/imageView_package"
             android:src="@mipmap/ic_launcher_round"
             android:padding="8dp"
+            android:background="@android:color/transparent"
             android:layout_width="50dp"
             android:layout_height="50dp"/>
         <LinearLayout
