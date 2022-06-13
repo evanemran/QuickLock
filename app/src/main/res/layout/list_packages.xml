@@ -35,7 +35,7 @@
             <TextView
                 android:id="@+id/textView_packageName"
                 android:text="App Name"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:padding="8dp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
