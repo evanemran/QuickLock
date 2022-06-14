@@ -58,8 +58,8 @@ public class InstalledFIlesFragment extends Fragment {
         button_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent intent = new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS);
-                startActivity(intent);*/
+                Intent intent = new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS);
+                startActivity(intent);
                 getActivity().startService(new Intent(getActivity(), LockAccessibilityService.class));
             }
         });
