@@ -7,7 +7,7 @@
     app:cardElevation="8dp"
     android:id="@+id/drawer_container"
     android:padding="4dp"
-    android:layout_margin="4dp">
+    android:layout_margin="8dp">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -15,14 +15,14 @@
         <ImageView
             android:id="@+id/imageView_drawer"
             android:layout_width="36dp"
-            android:padding="8dp"
+            android:padding="4dp"
             android:src="@mipmap/ic_launcher"
             android:layout_height="36dp"/>
         <TextView
             android:id="@+id/textView_drawer"
             android:layout_gravity="center_vertical"
             android:text="Menu"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textColor="@color/white"
             android:paddingStart="4dp"
             android:layout_width="match_parent"
