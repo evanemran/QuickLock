@@ -43,10 +43,11 @@ public class SystemFilesFragment extends Fragment {
         database = RoomDb.getInstance(getContext());
         dbList =database.mainDAO().getAll();
 
-        if (dbList.isEmpty()){
+        /*if (dbList.isEmpty()){
             setupSystemList(getInstalledApps(true));
         }
-        else setupSystemList(dbList);
+        else setupSystemList(dbList);*/
+        setupSystemList(getInstalledApps(true));
         return view;
     }
 
@@ -68,10 +69,10 @@ public class SystemFilesFragment extends Fragment {
                     , false));
 
             //adding to db
-            database.mainDAO().insert(new InstalledApps(p.applicationInfo.loadLabel(getActivity().getPackageManager()).toString(),
+            /*database.mainDAO().insert(new InstalledApps(p.applicationInfo.loadLabel(getActivity().getPackageManager()).toString(),
                     p.packageName,
                     getIconByteArray(p.applicationInfo.loadIcon(getActivity().getPackageManager())),
-                    false));
+                    false));*/
 
 //            if ((p.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0){
 //                res.add(new InstalledApps(p.applicationInfo.loadLabel(getPackageManager()).toString(),

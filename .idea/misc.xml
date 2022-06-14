@@ -3,18 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android_Projects/QuickLock/app/src/main/res/drawable/ic_home.xml" value="0.1655" />
-        <entry key="..\:/Android_Projects/QuickLock/app/src/main/res/layout/activity_main.xml" value="0.30416666666666664" />
-        <entry key="..\:/Android_Projects/QuickLock/app/src/main/res/layout/fragment_installedfiles.xml" value="0.30416666666666664" />
-        <entry key="..\:/Android_Projects/QuickLock/app/src/main/res/layout/list_drawer.xml" value="0.30416666666666664" />
-        <entry key="..\:/Android_Projects/QuickLock/app/src/main/res/layout/list_packages.xml" value="0.30416666666666664" />
-        <entry key="..\:/Android_Projects/QuickLock/app/src/main/res/layout/nav_header.xml" value="0.30416666666666664" />
         <entry key="..\:/LockTank/app/src/main/res/drawable/ic_locked.xml" value="0.123" />
+        <entry key="..\:/LockTank/app/src/main/res/layout/activity_lock_screen.xml" value="0.1921875" />
         <entry key="..\:/LockTank/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
         <entry key="..\:/LockTank/app/src/main/res/layout/fragment_installedfiles.xml" value="0.1921875" />
         <entry key="..\:/LockTank/app/src/main/res/layout/fragment_systemfiles.xml" value="0.1921875" />
         <entry key="..\:/LockTank/app/src/main/res/layout/fragment_vault.xml" value="0.1921875" />
         <entry key="..\:/LockTank/app/src/main/res/layout/list_packages.xml" value="0.2" />
+        <entry key="..\:/LockTank/app/src/main/res/layout/nav_header.xml" value="0.1921875" />
       </map>
     </option>
   </component>
