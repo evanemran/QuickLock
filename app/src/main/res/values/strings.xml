@@ -8,4 +8,6 @@
     <string name="theme">Theme</string>
     <string name="about">About</string>
     <string name="policy">Policy</string>
+    <string name="accessibility_service_name">Foreground Window Tracker</string>
+    <string name="accessibility_service_description">This is for detecting foreground window to filter them with user locked apps.</string>
 </resources>

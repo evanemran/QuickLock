@@ -40,7 +40,6 @@ public class LockerService extends Service {
     @Override
     public void onCreate() {
         Toast.makeText(this, "Congrats! Lock Service Created", Toast.LENGTH_LONG).show();
-
     }
 
     @Override
@@ -93,6 +92,8 @@ public class LockerService extends Service {
             Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
             mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
             List<ResolveInfo> appList = packageManager.queryIntentActivities(mainIntent, 0);
+
+
             Collections.sort(appList, new ResolveInfo.DisplayNameComparator(packageManager));
             List<PackageInfo> packs = packageManager.getInstalledPackages(0);
             for(int i=0; i < packs.size(); i++)
@@ -115,7 +116,7 @@ public class LockerService extends Service {
             String app_name = printCurrentActivity();
 
 
-            if (activityOnTop.startsWith("com.example")) {
+            if (!activityOnTop.startsWith("com.example")) {
                 Intent lockIntent = new Intent(getApplicationContext(), LockScreenActivity.class);
                 lockIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(lockIntent);

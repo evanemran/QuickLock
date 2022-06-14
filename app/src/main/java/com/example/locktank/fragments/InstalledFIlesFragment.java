@@ -25,6 +25,7 @@ import com.example.locktank.adapters.PackageListAdapter;
 import com.example.locktank.database.RoomDb;
 import com.example.locktank.listeners.ClickListener;
 import com.example.locktank.model.InstalledApps;
+import com.example.locktank.service.LockAccessibilityService;
 import com.example.locktank.service.LockerService;
 
 import java.io.ByteArrayOutputStream;
@@ -57,7 +58,9 @@ public class InstalledFIlesFragment extends Fragment {
         button_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().startService(new Intent(getActivity(), LockerService.class));
+                /*Intent intent = new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS);
+                startActivity(intent);*/
+                getActivity().startService(new Intent(getActivity(), LockAccessibilityService.class));
             }
         });
 
