@@ -42,7 +42,7 @@ public class LockAccessibilityService extends AccessibilityService {
         String packageName = event.getPackageName().toString();
         Log.e(TAG, "packagename: " + packageName);
 
-        if (packageName.contains("com.facebook.katana")) {
+        if (packageName.contains("com.whatsapp")) {
             Intent lockIntent = new Intent(getApplicationContext(), LockScreenActivity.class);
             lockIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getApplicationContext().startActivity(lockIntent);

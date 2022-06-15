@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         viewPagerAdapter.addFragment(systemFilesFragment, "System");
         viewPagerAdapter.addFragment(installedFIlesFragment, "Installed");
-        viewPagerAdapter.addFragment(vaultFragment, "Vault");
+//        viewPagerAdapter.addFragment(vaultFragment, "Vault");
 
         viewPager.setAdapter(viewPagerAdapter);
     }
