@@ -23,7 +23,7 @@ public class LockAccessibilityService extends AccessibilityService {
 
         AccessibilityServiceInfo info = new AccessibilityServiceInfo();
         info.eventTypes = AccessibilityEvent.TYPE_VIEW_CLICKED |
-                AccessibilityEvent.TYPE_VIEW_FOCUSED;
+                AccessibilityEvent.TYPE_VIEW_FOCUSED | AccessibilityEvent.TYPES_ALL_MASK;
 
         info.feedbackType = AccessibilityServiceInfo.FEEDBACK_SPOKEN;
 
