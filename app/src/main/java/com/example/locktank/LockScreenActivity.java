@@ -7,8 +7,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.itsxtt.patternlock.PatternLockView;
@@ -19,6 +21,7 @@ public class LockScreenActivity extends AppCompatActivity {
 
     PatternLockView patternLockView;
     ImageView imageView_appIcon;
+    EditText editText_pin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,9 @@ public class LockScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lock_screen);
 
         imageView_appIcon = findViewById(R.id.imageView_appIcon);
+        editText_pin = findViewById(R.id.edittext_pin);
+
+        disableSoftInputFromAppearing(editText_pin);
 
         String packageName = getIntent().getStringExtra("package");
 
@@ -79,5 +85,10 @@ public class LockScreenActivity extends AppCompatActivity {
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(startMain);
         super.onBackPressed();
+    }
+
+    public static void disableSoftInputFromAppearing(EditText editText) {
+        editText.setRawInputType(InputType.TYPE_CLASS_TEXT);
+        editText.setTextIsSelectable(true);
     }
 }
