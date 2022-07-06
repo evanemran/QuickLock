@@ -8,11 +8,13 @@
     android:gravity="center"
     tools:context=".LockScreenActivity">
     <ImageView
+        android:visibility="gone"
         android:src="@drawable/ashneer"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <TextView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -23,4 +25,47 @@
         android:textSize="30sp"
         android:padding="8dp"
         android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:id="@+id/imageView_appIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/text_container"/>
+
+    <TextView
+        android:id="@+id/text_container"
+        android:layout_above="@+id/patternLockView"
+        android:text="Enter Pattern or Fingerprint to Unlock"
+        android:textColor="@color/red"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.itsxtt.patternlock.PatternLockView
+        android:id="@+id/patternLockView"
+        style="@style/PatternLockView.WithIndicator"
+        android:layout_width="300dp"
+        android:layout_centerInParent="true"
+        app:plv_regularDotColor="@color/white"
+        app:plv_selectedDotColor="@color/red"
+        app:plv_errorDotColor="#FD0000"
+        app:plv_columnCount="4"
+        app:plv_rowCount="4"
+        app:plv_lineStyle="common"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_below="@+id/patternLockView"
+        android:text="Forgot Pattern?"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

@@ -42,9 +42,10 @@ public class LockAccessibilityService extends AccessibilityService {
         String packageName = event.getPackageName().toString();
         Log.e(TAG, "packagename: " + packageName);
 
-        if (packageName.contains("com.whatsapp")) {
+        if (packageName.contains("com.evanemran.calculator")) {
             Intent lockIntent = new Intent(getApplicationContext(), LockScreenActivity.class);
             lockIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            lockIntent.putExtra("package", packageName);
             getApplicationContext().startActivity(lockIntent);
         }
 
