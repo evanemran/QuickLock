@@ -47,6 +47,7 @@ public class SystemFilesFragment extends Fragment {
             setupSystemList(getInstalledApps(true));
         }
         else setupSystemList(dbList);*/
+
         setupSystemList(getInstalledApps(true));
         return view;
     }
