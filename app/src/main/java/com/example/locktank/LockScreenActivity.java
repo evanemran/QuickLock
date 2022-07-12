@@ -8,10 +8,13 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.itsxtt.patternlock.PatternLockView;
 
@@ -35,6 +38,8 @@ public class LockScreenActivity extends AppCompatActivity {
         editText_pin = findViewById(R.id.edittext_pin);
 
         disableSoftInputFromAppearing(editText_pin);
+
+        editText_pin.setShowSoftInputOnFocus(false);
 
         String packageName = getIntent().getStringExtra("package");
 
@@ -84,11 +89,32 @@ public class LockScreenActivity extends AppCompatActivity {
         startMain.addCategory(Intent.CATEGORY_HOME);
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(startMain);
+        this.finish();
         super.onBackPressed();
     }
 
     public static void disableSoftInputFromAppearing(EditText editText) {
         editText.setRawInputType(InputType.TYPE_CLASS_TEXT);
         editText.setTextIsSelectable(true);
+    }
+
+    public void pinClicked(View view){
+        TextView textView = (TextView) view;
+        editText_pin.setText(editText_pin.getText().toString() + textView.getText().toString());
+    }
+
+    public void onOkClicked(View view){
+        Button button = (Button) view;
+        validatePin(editText_pin.getText().toString());
+    }
+
+    private void validatePin(String pin) {
+        if (pin.isEmpty()){
+            editText_pin.setError("Enter Pin");
+            return;
+        }
+        else if (pin.equals("123456")){
+            this.finish();
+        }
     }
 }
