@@ -110,11 +110,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void setupViewPager(ViewPager viewPager){
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         SystemFilesFragment systemFilesFragment = new SystemFilesFragment();
-        InstalledFIlesFragment installedFIlesFragment = new InstalledFIlesFragment();
+        InstalledFIlesFragment installedFIlesFragment = new InstalledFIlesFragment(false);
+        InstalledFIlesFragment lockedFilesFragment = new InstalledFIlesFragment(true);
         VaultFragment vaultFragment = new VaultFragment();
 
-        viewPagerAdapter.addFragment(systemFilesFragment, "System");
+//        viewPagerAdapter.addFragment(systemFilesFragment, "System");
         viewPagerAdapter.addFragment(installedFIlesFragment, "Installed");
+        viewPagerAdapter.addFragment(lockedFilesFragment, "Locked");
 //        viewPagerAdapter.addFragment(vaultFragment, "Vault");
 
         viewPager.setAdapter(viewPagerAdapter);

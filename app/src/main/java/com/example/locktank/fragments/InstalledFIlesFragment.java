@@ -39,6 +39,11 @@ public class InstalledFIlesFragment extends Fragment {
     RoomDb database;
     List<InstalledApps> dbList = new ArrayList<>();
     Button button_save;
+    Boolean isLockedFiles;
+
+    public InstalledFIlesFragment(Boolean isLockedFiles) {
+        this.isLockedFiles = isLockedFiles;
+    }
 
     @Nullable
     @Override
@@ -48,7 +53,7 @@ public class InstalledFIlesFragment extends Fragment {
         button_save = view.findViewById(R.id.button_save);
 
         database = RoomDb.getInstance(getContext());
-        dbList =database.mainDAO().getAll();
+        dbList = isLockedFiles ? database.mainDAO().getAllLockedApp() : database.mainDAO().getAll() ;
 
         if (dbList.isEmpty()){
             setupSystemList(getInstalledApps(true));

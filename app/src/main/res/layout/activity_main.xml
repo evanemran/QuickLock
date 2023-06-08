@@ -10,7 +10,7 @@
     tools:openDrawer="start"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -20,6 +20,7 @@
             app:title="@string/app_name"
             android:background="@color/red"
             app:titleTextColor="@color/white"
+            android:layout_alignParentTop="true"
             android:layout_height="?attr/actionBarSize"/>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -31,15 +32,31 @@
             app:tabTextColor="@color/white"
             app:tabMode="fixed"
             app:tabTextAppearance="@style/tab_text"
+            android:layout_below="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
+            android:layout_below="@+id/tabLayout"
+            android:layout_above="@+id/button_save"
             android:background="@android:color/transparent"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-    </LinearLayout>
+        <Button
+            android:visibility="visible"
+            android:id="@+id/button_save"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:padding="8dp"
+            android:paddingBottom="8dp"
+            android:layout_alignParentBottom="true"
+            android:text="Save"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

@@ -10,6 +10,7 @@
         android:layout_height="match_parent"/>
 
     <Button
+        android:visibility="gone"
         android:id="@+id/button_save"
         android:layout_margin="16dp"
         android:layout_alignParentBottom="true"

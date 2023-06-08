@@ -24,6 +24,9 @@ public interface MainDao {
     @Query("UPDATE apps SET isLocked = :status WHERE id = :id")
     void update(int id, boolean status);
 
-    @Query("SELECT * FROM apps ORDER BY title DESC")
+    @Query("SELECT * FROM apps ORDER BY title ASC")
     List<InstalledApps> getAll();
+
+    @Query("SELECT * FROM apps WHERE isLocked = 1 ORDER BY title ASC")
+    List<InstalledApps> getAllLockedApp();
 }
