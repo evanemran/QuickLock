@@ -26,4 +26,7 @@
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
+    <style name="AppTabLayout" parent="@style/Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/tab_selector</item>
+    </style>
 </resources>

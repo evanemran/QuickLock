@@ -44,11 +44,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LockTank">
         <activity
-            android:name=".ThemeActivity"
+            android:name="com.evanemran.quicklock.ThemeActivity"
             android:exported="false" />
 
         <service
-            android:name=".service.LockAccessibilityService"
+            android:name="com.evanemran.quicklock.service.LockAccessibilityService"
             android:exported="false"
             android:label="@string/accessibility_service_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
@@ -62,10 +62,10 @@
         </service>
 
         <activity
-            android:name=".LockScreenActivity"
+            android:name="com.evanemran.quicklock.LockScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.evanemran.quicklock.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

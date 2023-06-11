@@ -6,9 +6,9 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.locktank"
+        applicationId "com.evanemran.quicklock"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

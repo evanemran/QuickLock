@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:background="@color/black"
     tools:openDrawer="start"
-    tools:context=".MainActivity">
+    tools:context="com.evanemran.quicklock.MainActivity">
 
     <RelativeLayout
         android:orientation="vertical"
@@ -22,19 +22,22 @@
             app:titleTextColor="@color/white"
             android:layout_alignParentTop="true"
             android:layout_height="?attr/actionBarSize"/>
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
-            app:tabIndicatorColor="@color/red"
-            app:tabIndicatorHeight="2dp"
-            app:tabSelectedTextColor="@color/red"
-            android:background="@android:color/transparent"
-            app:tabGravity="fill"
-            app:tabTextColor="@color/white"
-            app:tabMode="fixed"
-            app:tabTextAppearance="@style/tab_text"
-            android:layout_below="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/red"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/tab_text"
+            app:tabTextColor="@color/white" />
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_below="@+id/tabLayout"
@@ -46,12 +49,11 @@
         <Button
             android:visibility="visible"
             android:id="@+id/button_save"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:padding="8dp"
+            android:background="@drawable/custom_button"
             android:paddingBottom="8dp"
             android:layout_alignParentBottom="true"
-            android:text="Save"
+            android:text="SAVE"
             android:textSize="18sp"
             android:textAllCaps="false"
             android:layout_width="match_parent"
@@ -76,9 +78,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_nav"
-                android:layout_below="@+id/nav_header"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nav_header" />
 
             <TextView
                 android:id="@+id/version_name"
