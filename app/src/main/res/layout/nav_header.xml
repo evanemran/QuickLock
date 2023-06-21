@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="276dp"
     android:orientation="vertical"
-    android:background="@drawable/background"
+    android:background="@color/red"
     android:padding="16dp"
     android:gravity="bottom">
     <ImageView
@@ -30,5 +30,15 @@
         android:text="by Coding With Evan">
 
     </TextView>
+    <TextView
+        android:id="@+id/version_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="8dp"
+        android:text="Version"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
 
 </LinearLayout>
