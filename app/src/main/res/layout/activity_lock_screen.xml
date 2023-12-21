@@ -130,6 +130,7 @@
                             android:layout_width="0dp"
                             android:layout_height="75dp"
                             android:layout_weight="1"
+                            android:textColor="@color/white"
                             android:text="1"
                             android:onClick="pinClicked"
                             android:backgroundTint="@android:color/transparent"
@@ -139,6 +140,7 @@
                             android:layout_height="75dp"
                             android:layout_weight="1"
                             android:text="2"
+                            android:textColor="@color/white"
                             android:onClick="pinClicked"
                             android:backgroundTint="@android:color/transparent"
                             android:textSize="20sp"/>
@@ -147,6 +149,7 @@
                             android:layout_height="75dp"
                             android:layout_weight="1"
                             android:text="3"
+                            android:textColor="@color/white"
                             android:onClick="pinClicked"
                             android:backgroundTint="@android:color/transparent"
                             android:textSize="20sp"/>
@@ -160,6 +163,7 @@
                             android:layout_height="75dp"
                             android:layout_weight="1"
                             android:text="4"
+                            android:textColor="@color/white"
                             android:onClick="pinClicked"
                             android:backgroundTint="@android:color/transparent"
                             android:textSize="20sp"/>
@@ -167,6 +171,7 @@
                             android:layout_width="0dp"
                             android:layout_height="75dp"
                             android:layout_weight="1"
+                            android:textColor="@color/white"
                             android:text="5"
                             android:onClick="pinClicked"
                             android:backgroundTint="@android:color/transparent"
@@ -174,6 +179,7 @@
                         <Button
                             android:layout_width="0dp"
                             android:layout_height="75dp"
+                            android:textColor="@color/white"
                             android:layout_weight="1"
                             android:text="6"
                             android:onClick="pinClicked"
@@ -188,6 +194,7 @@
                             android:layout_width="0dp"
                             android:layout_height="75dp"
                             android:layout_weight="1"
+                            android:textColor="@color/white"
                             android:text="7"
                             android:onClick="pinClicked"
                             android:backgroundTint="@android:color/transparent"
@@ -196,6 +203,7 @@
                             android:layout_width="0dp"
                             android:layout_height="75dp"
                             android:layout_weight="1"
+                            android:textColor="@color/white"
                             android:text="8"
                             android:onClick="pinClicked"
                             android:backgroundTint="@android:color/transparent"
@@ -203,6 +211,7 @@
                         <Button
                             android:layout_width="0dp"
                             android:layout_height="75dp"
+                            android:textColor="@color/white"
                             android:layout_weight="1"
                             android:text="9"
                             android:onClick="pinClicked"
@@ -214,8 +223,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <ImageButton
+                            android:id="@+id/imageButton_backSpace"
                             android:src="@drawable/ic_backspace"
                             android:layout_width="0dp"
+                            android:textColor="@color/white"
                             android:layout_height="75dp"
                             android:background="@android:color/transparent"
                             android:layout_weight="1"/>
@@ -223,6 +234,7 @@
                             android:layout_width="0dp"
                             android:layout_height="75dp"
                             android:layout_weight="1"
+                            android:textColor="@color/white"
                             android:text="0"
                             android:backgroundTint="@android:color/transparent"
                             android:textSize="20sp"/>

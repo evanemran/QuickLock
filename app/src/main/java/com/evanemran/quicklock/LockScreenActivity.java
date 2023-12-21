@@ -12,6 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class LockScreenActivity extends AppCompatActivity {
     PatternLockView patternLockView;
     ImageView imageView_appIcon;
     EditText editText_pin;
+    ImageButton imageButton_backSpace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +38,20 @@ public class LockScreenActivity extends AppCompatActivity {
 
         imageView_appIcon = findViewById(R.id.imageView_appIcon);
         editText_pin = findViewById(R.id.edittext_pin);
+        imageButton_backSpace = findViewById(R.id.imageButton_backSpace);
 
         disableSoftInputFromAppearing(editText_pin);
 
         editText_pin.setShowSoftInputOnFocus(false);
+
+        imageButton_backSpace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText_pin.setText(String.valueOf(
+                        Integer.parseInt(editText_pin.getText().toString())/10
+                ));
+            }
+        });
 
         String packageName = getIntent().getStringExtra("package");
 
